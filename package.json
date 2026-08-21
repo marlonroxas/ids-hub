@@ -1,0 +1,39 @@
+{
+  "name": "ids-hub",
+  "version": "1.0.0",
+  "description": "iDS Hub Capability & Security Portal. A modular React SPFx application modernizing the NAB ATCP Training Tracker and preparing for future Secure Behavior integration.",
+  "private": true,
+  "homepage": "https://github.com/marlonroxas/ids-hub#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/marlonroxas/ids-hub.git"
+  },
+  "bugs": {
+    "url": "https://github.com/marlonroxas/ids-hub/issues"
+  },
+  "license": "MIT",
+  "author": {
+    "name": "iDS Team",
+    "email": "ids-team@example.com"
+  },
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=9.0.0"
+  },
+  "scripts": {
+    "install:spfx": "cd ids-hub-spfx && npm install",
+    "build": "cd ids-hub-spfx && npm run build",
+    "dev": "cd ids-hub-spfx && npm run serve",
+    "serve": "cd ids-hub-spfx && npm run serve",
+    "test": "cd ids-hub-spfx && npm run test",
+    "test:watch": "cd ids-hub-spfx && npm run test:watch",
+    "test:coverage": "cd ids-hub-spfx && npm run test:coverage",
+    "package": "cd ids-hub-spfx && npm run package",
+    "package:prod": "cd ids-hub-spfx && npm run package-prod",
+    "clean": "cd ids-hub-spfx && npm run clean",
+    "linter": "cd ids-hub-spfx && npm run linter",
+    "linter:fix": "cd ids-hub-spfx && npm run linter:fix",
+    "docs": "echo 'See docs/ directory for project documentation'"
+  },
+  "devDependencies": {}
+}
