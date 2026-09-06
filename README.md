@@ -1,8 +1,8 @@
-# iDS Hub – Capability & Security Portal
+# Koala's Hub – Capability & Security Portal
 
 **One Hub. Clear Actions. Stronger Capability and Security.**
 
-iDS Hub is a modern, modular SharePoint Framework (SPFx) application that modernizes the existing NAB ATCP Training Tracker and serves as the foundation for future Secure Behavior Score integration. This repository contains the single, deployable SPFx solution with all feature modules.
+Koala's Hub is a modern, modular SharePoint Framework (SPFx) application that modernizes the existing NAB ATCP Training Tracker and serves as the foundation for future Secure Behavior Score integration. This repository contains the single, deployable SPFx solution with all feature modules.
 
 ## 📋 Quick Start
 
@@ -17,11 +17,11 @@ iDS Hub is a modern, modular SharePoint Framework (SPFx) application that modern
 
 ```bash
 # Clone the repository
-git clone git@github.com:marlonroxas/ids-hub.git
-cd ids-hub
+git clone git@github.com:marlonroxas/koala-hub.git
+cd koala-hub
 
-# The SPFx solution is in ids-hub-spfx/
-cd ids-hub-spfx
+# The SPFx solution is in koala-hub-spfx/
+cd koala-hub-spfx
 
 # Install dependencies
 npm install
@@ -47,7 +47,7 @@ The deployable package will be in `sharepoint/solution/`.
 ## 🏗️ Repository Structure
 
 ```
-ids-hub/
+koala-hub/
 ├── .github/                          # GitHub configuration
 │   ├── CODEOWNERS
 │   ├── PULL_REQUEST_TEMPLATE.md
@@ -66,10 +66,10 @@ ids-hub/
 │   ├── provisioning/                # PnP provisioning templates
 │   ├── lists/                       # List schemas
 │   └── libraries/                   # Document library config
-├── ids-hub-spfx/                     # SPFx Solution (generated)
+├── koala-hub-spfx/                     # SPFx Solution (generated)
 │   ├── src/
 │   │   ├── webparts/
-│   │   │   └── idsHubPortal/        # Main web part
+│   │   │   └── koalaHubPortal/        # Main web part
 │   │   │       ├── components/      # React components
 │   │   │       ├── application/     # App bootstrap & config
 │   │   │       ├── shell/           # Layout & navigation
@@ -90,7 +90,7 @@ ids-hub/
 
 ## 🎯 Feature Modules
 
-iDS Hub is organized as independently deployable feature modules within a single SPFx solution:
+Koala Hub is organized as independently deployable feature modules within a single SPFx solution:
 
 - **Welcome** – Onboarding & introduction
 - **Home** – Dashboard & quick actions
@@ -104,7 +104,7 @@ iDS Hub is organized as independently deployable feature modules within a single
 - **Notifications** – Alerts & messaging
 - **Data Status** – System health & sync indicators
 - **Role Switcher** – User perspective simulation
-- **iDS Copilot** – AI-assisted actions & insights
+- **Koala Copilot** – AI-assisted actions & insights
 
 ## 🔧 Technology Stack
 
@@ -134,7 +134,7 @@ See the [docs/](./docs/) directory for comprehensive guides:
 ### Development
 
 ```bash
-cd ids-hub-spfx
+cd koala-hub-spfx
 npm run serve
 ```
 
@@ -147,7 +147,7 @@ npm run serve
 
 2. **Upload to App Catalog**:
    - Navigate to SharePoint App Catalog
-   - Upload `ids-hub-spfx/sharepoint/solution/ids-hub.sppkg`
+   - Upload `koala-hub-spfx/sharepoint/solution/koala-hub.sppkg`
    - Approve for organization use
 
 3. **Add to Site**:
@@ -166,7 +166,7 @@ See [Deployment Guide](./docs/deployment/sharepoint-deployment.md) for details.
 ## 🧪 Testing
 
 ```bash
-cd ids-hub-spfx
+cd koala-hub-spfx
 
 # Run all tests
 npm run test
@@ -214,15 +214,15 @@ See [CONTRIBUTING.md](#) for details.
 
 ## 🐛 Known Issues & Roadmap
 
-See [GitHub Issues](https://github.com/marlonroxas/ids-hub/issues) for known issues and feature requests.
+See [GitHub Issues](https://github.com/marlonroxas/koala-hub/issues) for known issues and feature requests.
 
 ## 💬 Support
 
 For questions or issues:
 
-1. Check [existing issues](https://github.com/marlonroxas/ids-hub/issues)
+1. Check [existing issues](https://github.com/marlonroxas/koala-hub/issues)
 2. Review [documentation](./docs/)
-3. Create a [new issue](https://github.com/marlonroxas/ids-hub/issues/new)
+3. Create a [new issue](https://github.com/marlonroxas/koala-hub/issues/new)
 
 ## 📄 License
 
@@ -230,4 +230,4 @@ This project is licensed under the [MIT License](./LICENSE).
 
 ---
 
-**iDS Hub** is maintained by the iDS Team. For internal support, contact ids-team@example.com.
+**Koala Hub** is maintained by the Koala Team. For internal support, contact koala-team@example.com.
