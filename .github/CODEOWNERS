@@ -1,0 +1,18 @@
+# iDS Hub CODEOWNERS
+# Define code ownership for team collaboration and PR review routing
+
+# Root and shared files
+* @marlonroxas
+package.json @marlonroxas
+.github/ @marlonroxas
+
+# Documentation
+docs/ @marlonroxas
+
+# SharePoint provisioning
+sharepoint/ @marlonroxas
+
+# SPFx application
+ids-hub-spfx/ @marlonroxas
+ids-hub-spfx/src/webparts/ @marlonroxas
+ids-hub-spfx/src/webparts/koalaHubPortal/ @marlonroxas

@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<pnp:Provisioning xmlns:pnp="http://schemas.dev.office.com/PnP/Provisioning/202108">
+  <pnp:Preferences Generator="PnP" />
+  <pnp:Templates ID="CONTOSO">
+    <pnp:ProvisioningTemplate ID="iDS-Hub-Lists" Version="1.0" Scope="Web">
+      
+      <!-- Training Tracker List -->
+      <pnp:Lists>
+        <pnp:ListInstance Title="Training Tracker" Description="Track user training completion and progress" TemplateType="GenericList" Url="Lists/TrainingTracker" OnQuickLaunch="true">
+          <pnp:Fields>
+            <pnp:Field ID="{c042a256-787d-4a6f-8a8a-cf6ab767f12d}" Type="Text" Name="Category" DisplayName="Category" Required="true" />
+            <pnp:Field ID="{d4481d4c-6b23-4d1b-b0e1-6e5e4c7d8a3f}" Type="Choice" Name="Status" DisplayName="Status" Required="true">
+              <CHOICE>Not Started</CHOICE>
+              <CHOICE>In Progress</CHOICE>
+              <CHOICE>Completed</CHOICE>
+              <CHOICE>Overdue</CHOICE>
+            </pnp:Field>
+            <pnp:Field ID="{0d6cea7b-bc83-47c0-86bd-403e8993d5f0}" Type="DateTime" Name="DueDate" DisplayName="Due Date" Required="true" />
+            <pnp:Field ID="{c5a48b15-6c9e-4ff5-8e9c-e8f4d3c2e1a0}" Type="Number" Name="Score" DisplayName="Score" />
+            <pnp:Field ID="{b1e3d5e7-9f1a-4b3c-8d6e-5c4f7a2b9d0e}" Type="User" Name="CompletedBy" DisplayName="Completed By" />
+            <pnp:Field ID="{a7c8d9e0-1f2a-4b5c-8d9e-0f1a2b3c4d5e}" Type="DateTime" Name="CompletionDate" DisplayName="Completion Date" />
+          </pnp:Fields>
+          <pnp:Views>
+            <pnp:View Name="All Training" DefaultView="true" MobileView="true">
+              <Query />
+              <ViewFields>
+                <FieldRef Name="LinkTitle" />
+                <FieldRef Name="Category" />
+                <FieldRef Name="Status" />
+                <FieldRef Name="DueDate" />
+              </ViewFields>
+            </pnp:View>
+          </pnp:Views>
+        </pnp:ListInstance>
+      </pnp:Lists>
+
+      <!-- Action Items List -->
+      <pnp:Lists>
+        <pnp:ListInstance Title="Action Items" Description="Track recommended actions and completion" TemplateType="GenericList" Url="Lists/ActionItems" OnQuickLaunch="true">
+          <pnp:Fields>
+            <pnp:Field ID="{e1d4e5f6-7a8b-4c5d-8e9f-0a1b2c3d4e5f}" Type="Text" Name="Priority" DisplayName="Priority" Required="true" />
+            <pnp:Field ID="{f2e5f6a7-8b9c-5d6e-9f0a-1b2c3d4e5f6a}" Type="Choice" Name="Status" DisplayName="Status" Required="true">
+              <CHOICE>New</CHOICE>
+              <CHOICE>In Progress</CHOICE>
+              <CHOICE>Completed</CHOICE>
+              <CHOICE>Blocked</CHOICE>
+            </pnp:Field>
+            <pnp:Field ID="{a3b6c7d8-e9f0-1a2b-3c4d-5e6f7a8b9c0d}" Type="DateTime" Name="DueDate" DisplayName="Due Date" Required="true" />
+            <pnp:Field ID="{b4c7d8e9-f0a1-2b3c-4d5e-6f7a8b9c0d1e}" Type="User" Name="AssignedTo" DisplayName="Assigned To" Required="true" />
+          </pnp:Fields>
+          <pnp:Views>
+            <pnp:View Name="My Actions" DefaultView="true" MobileView="true">
+              <Query />
+              <ViewFields>
+                <FieldRef Name="LinkTitle" />
+                <FieldRef Name="AssignedTo" />
+                <FieldRef Name="Status" />
+                <FieldRef Name="Priority" />
+                <FieldRef Name="DueDate" />
+              </ViewFields>
+            </pnp:View>
+          </pnp:Views>
+        </pnp:ListInstance>
+      </pnp:Lists>
+
+      <!-- Admin Settings List -->
+      <pnp:Lists>
+        <pnp:ListInstance Title="Admin Settings" Description="Application configuration and feature flags" TemplateType="GenericList" Url="Lists/AdminSettings" OnQuickLaunch="false">
+          <pnp:Fields>
+            <pnp:Field ID="{c5d6e7f8-a9b0-1c2d-3e4f-5a6b7c8d9e0f}" Type="Text" Name="SettingName" DisplayName="Setting Name" Required="true" />
+            <pnp:Field ID="{d6e7f8a9-b0c1-2d3e-4f5a-6b7c8d9e0f1a}" Type="Text" Name="SettingValue" DisplayName="Setting Value" Required="true" />
+            <pnp:Field ID="{e7f8a9b0-c1d2-3e4f-5a6b-7c8d9e0f1a2b}" Type="Choice" Name="Type" DisplayName="Type" Required="true">
+              <CHOICE>Boolean</CHOICE>
+              <CHOICE>Text</CHOICE>
+              <CHOICE>Number</CHOICE>
+              <CHOICE>JSON</CHOICE>
+            </pnp:Field>
+          </pnp:Fields>
+        </pnp:ListInstance>
+      </pnp:Lists>
+
+    </pnp:ProvisioningTemplate>
+  </pnp:Templates>
+</pnp:Provisioning>

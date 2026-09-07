@@ -1,0 +1,55 @@
+{
+  "id": "a8f9f6a5-5d6a-4b0c-8e7f-3d8b8b75f3a1",
+  "alias": "KoalaHubPortalWebPart",
+  "componentType": "WebPart",
+  "version": "1.0.0",
+  "manifestVersion": 2,
+  "preconfiguredEntries": [
+    {
+      "groupId": "c3c8f7a4-7f3b-4d2a-9f8f-1a2b3c4d5e6f",
+      "group": {
+        "default": "Koala Hub"
+      },
+      "title": {
+        "default": "Koala Hub Portal"
+      },
+      "description": {
+        "default": "Resource, capability and security portal"
+      },
+      "officeFabricIconFontName": "ViewDashboard",
+      "properties": {
+        "description": "A single workspace for the work that keeps our teams ready."
+      }
+    }
+  ],
+  "loaderConfig": {
+    "internalModuleBaseUrls": [],
+    "entryModuleId": "koala-hub-portal",
+    "scriptResources": {
+      "koala-hub-portal": {
+        "type": "path",
+        "path": "koala-hub-portal.js"
+      },
+      "react": {
+        "type": "component",
+        "id": "0d910c1c-13b9-4e1c-9aa4-b008c5e42d7d",
+        "version": "18.2.0"
+      },
+      "react-dom": {
+        "type": "component",
+        "id": "aa0a46ec-1505-43cd-a44a-93f3a5aa460a",
+        "version": "18.2.0"
+      },
+      "@microsoft/sp-core-library": {
+        "type": "component",
+        "id": "7263c7d0-1d6a-45ec-8d85-d4d1d234171b",
+        "version": "1.20.0"
+      },
+      "@microsoft/sp-webpart-base": {
+        "type": "component",
+        "id": "974a7777-0990-4136-8fa6-95d80114c2e0",
+        "version": "1.20.0"
+      }
+    }
+  }
+}

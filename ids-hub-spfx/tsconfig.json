@@ -1,0 +1,28 @@
+{
+  "compilerOptions": {
+    "target": "es2020",
+    "module": "esnext",
+    "lib": ["es2020", "dom"],
+    "jsx": "react",
+    "declaration": true,
+    "outDir": "./lib",
+    "rootDir": "./src",
+    "strict": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "resolveJsonModule": true,
+    "moduleResolution": "node",
+    "baseUrl": "./src",
+    "paths": {
+      "@components/*": ["webparts/koalaHubPortal/components/*"],
+      "@features/*": ["webparts/koalaHubPortal/features/*"],
+      "@shared/*": ["webparts/koalaHubPortal/shared/*"],
+      "@application/*": ["webparts/koalaHubPortal/application/*"]
+    },
+    "typeRoots": ["./node_modules/@types"],
+    "types": ["jest", "@testing-library/jest-dom"]
+  },
+  "include": ["src/**/*"],
+  "exclude": ["node_modules", "**/*.test.ts", "**/*.test.tsx"]
+}

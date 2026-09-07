@@ -1,0 +1,55 @@
+{
+  "name": "ids-hub-spfx",
+  "version": "1.0.0",
+  "description": "iDS Hub - SharePoint Framework Solution",
+  "main": "lib/index.js",
+  "scripts": {
+    "build": "gulp build",
+    "clean": "gulp clean",
+    "serve": "gulp serve-deprecated",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:coverage": "jest --coverage",
+    "package": "gulp bundle --ship",
+    "package-prod": "gulp package-solution --ship",
+    "package:prod": "gulp package-solution --ship",
+    "linter": "eslint src --ext .js,.jsx,.ts,.tsx",
+    "linter:fix": "eslint src --ext .js,.jsx,.ts,.tsx --fix"
+  },
+  "dependencies": {
+    "@microsoft/sp-core-library": "1.20.0",
+    "@microsoft/sp-lodash-subset": "1.20.0",
+    "@microsoft/sp-office-ui-fabric-core": "1.20.0",
+    "@microsoft/sp-webpart-base": "1.20.0",
+    "react": "18.2.0",
+    "react-dom": "18.2.0"
+  },
+  "devDependencies": {
+    "@fluentui/react": "8.112.0",
+    "@microsoft/eslint-config-spfx": "1.20.0",
+    "@microsoft/rush-stack-compiler-4.7": "^0.1.1",
+    "@microsoft/sp-build-web": "1.20.0",
+    "@microsoft/sp-tslint-rules": "1.20.0",
+    "@testing-library/jest-dom": "6.1.4",
+    "@testing-library/react": "14.1.2",
+    "@testing-library/user-event": "14.5.1",
+    "@types/jest": "29.5.8",
+    "@types/react": "18.2.37",
+    "@types/react-dom": "18.2.15",
+    "eslint": "^8.57.0",
+    "eslint-plugin-react-hooks": "^4.6.2",
+    "gulp": "4.0.2",
+    "identity-obj-proxy": "^3.0.0",
+    "jest": "29.7.0",
+    "jest-environment-jsdom": "29.7.0",
+    "ts-jest": "29.1.1",
+    "typescript": "5.2.2"
+  },
+  "overrides": {
+    "@microsoft/sp-module-interfaces": "1.20.2"
+  },
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=9.0.0"
+  }
+}

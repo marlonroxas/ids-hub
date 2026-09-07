@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Koala Hub preview</title>
+    <style>
+      :root {
+        --ink: #18324b;
+        --muted: #5d7184;
+        --blue: #0078d4;
+        --navy: #102a43;
+        --mint: #dff6ee;
+        --line: #e5edf3;
+        --surface: #ffffff;
+        --background: #f5f8fb;
+      }
+      * { box-sizing: border-box; }
+      body { margin: 0; color: var(--ink); background: var(--background); font: 14px "Segoe UI", Arial, sans-serif; }
+      button { font: inherit; }
+      .shell { display: flex; min-height: 100vh; }
+      .sidebar { width: 236px; padding: 24px 14px; color: #fff; background: var(--navy); }
+      .brand { display: flex; align-items: center; gap: 10px; margin: 0 10px 34px; font-size: 18px; font-weight: 700; }
+      .brand-mark { display: grid; width: 34px; height: 34px; place-items: center; border-radius: 10px; color: var(--navy); background: #f4c95d; font-size: 19px; }
+      .nav { display: grid; gap: 5px; }
+      .nav button { border: 0; border-radius: 6px; padding: 11px 12px; color: #c9d7e4; background: transparent; text-align: left; cursor: pointer; }
+      .nav button:hover, .nav button.active { color: #fff; background: #1d4666; }
+      .main { flex: 1; min-width: 0; }
+      .header { display: flex; justify-content: space-between; align-items: center; padding: 20px 40px; border-bottom: 1px solid var(--line); background: var(--surface); }
+      .header h1 { margin: 0; font-size: 22px; }
+      .header p { margin: 4px 0 0; color: var(--muted); }
+      .user { display: flex; align-items: center; gap: 10px; color: var(--muted); }
+      .avatar { display: grid; width: 34px; height: 34px; place-items: center; border-radius: 50%; color: #fff; background: var(--blue); font-weight: 700; }
+      .content { max-width: 1180px; margin: 0 auto; padding: 34px 40px 56px; }
+      .eyebrow { margin: 0 0 7px; color: var(--blue); font-size: 12px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; }
+      .content h2 { margin: 0 0 8px; font-size: 30px; }
+      .intro { margin: 0 0 26px; color: var(--muted); }
+      .metrics { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; margin-bottom: 28px; }
+      .card { border: 1px solid var(--line); border-radius: 10px; background: var(--surface); box-shadow: 0 2px 7px rgba(16, 42, 67, .05); }
+      .metric { padding: 20px; }
+      .metric span { color: var(--muted); font-size: 12px; }
+      .metric strong { display: block; margin: 7px 0 4px; font-size: 28px; }
+      .metric small { color: #16805e; }
+      .columns { display: grid; grid-template-columns: 1.35fr 1fr; gap: 18px; }
+      .panel { padding: 22px; }
+      .panel h3 { margin: 0 0 18px; font-size: 17px; }
+      .activity { display: flex; justify-content: space-between; gap: 16px; padding: 15px 0; border-top: 1px solid var(--line); }
+      .activity strong { display: block; margin-bottom: 5px; }
+      .activity small { color: var(--muted); }
+      .status { align-self: flex-start; padding: 4px 8px; border-radius: 12px; color: #16805e; background: var(--mint); font-size: 11px; white-space: nowrap; }
+      .score { display: flex; align-items: center; gap: 20px; }
+      .score-number { display: grid; width: 90px; height: 90px; place-items: center; border: 8px solid #f4c95d; border-radius: 50%; font-size: 24px; font-weight: 700; }
+      .score p { margin: 5px 0; color: var(--muted); line-height: 1.5; }
+      .empty { color: var(--muted); }
+      @media (max-width: 850px) { .sidebar { width: 190px; } .header, .content { padding-left: 24px; padding-right: 24px; } .metrics { grid-template-columns: repeat(2, 1fr); } .columns { grid-template-columns: 1fr; } }
+      @media (max-width: 560px) { .shell { display: block; } .sidebar { width: auto; padding: 14px; } .brand { margin-bottom: 14px; } .nav { grid-template-columns: repeat(2, 1fr); } .header { padding: 18px 20px; } .user { display: none; } .content { padding: 26px 20px; } .metrics { gap: 10px; } }
+    </style>
+  </head>
+  <body>
+    <div class="shell">
+      <aside class="sidebar">
+        <div class="brand"><span class="brand-mark">K</span> Koala Hub</div>
+        <nav class="nav" aria-label="Primary navigation">
+          <button class="active" data-page="Overview">Overview</button>
+          <button data-page="Compliance">Resource compliance</button>
+          <button data-page="Capability">Capability hub</button>
+          <button data-page="Security">Security behavior</button>
+          <button data-page="Resources">Resources</button>
+          <button data-page="Reports">Reports &amp; insights</button>
+          <button data-page="Administration">Administration</button>
+        </nav>
+      </aside>
+      <main class="main">
+        <header class="header">
+          <div><h1 id="page-title">Overview</h1><p>One place to manage resource readiness and security.</p></div>
+          <div class="user"><span>Welcome back, Marlon</span><span class="avatar">MR</span></div>
+        </header>
+        <section class="content" id="page-content">
+          <p class="eyebrow">Koala Hub</p>
+          <h2>Good morning, Marlon</h2>
+          <p class="intro">Here is the latest view of your team's compliance, capability and security posture.</p>
+          <div class="metrics">
+            <div class="card metric"><span>Compliance coverage</span><strong>86%</strong><small>+4% this month</small></div>
+            <div class="card metric"><span>Capability readiness</span><strong>72%</strong><small>On track</small></div>
+            <div class="card metric"><span>Security behavior score</span><strong>8.4</strong><small>Good standing</small></div>
+            <div class="card metric"><span>Open actions</span><strong>12</strong><small>3 due this week</small></div>
+          </div>
+          <div class="columns">
+            <section class="card panel"><h3>Recent activity</h3>
+              <div class="activity"><div><strong>Security awareness essentials</strong><small>Security &middot; All resources</small></div><span class="status">Completed</span></div>
+              <div class="activity"><div><strong>Data protection and privacy</strong><small>Compliance &middot; NAB delivery teams</small></div><span class="status">In progress</span></div>
+              <div class="activity"><div><strong>Business recovery team readiness</strong><small>Capability &middot; Recovery leads</small></div><span class="status">At risk</span></div>
+            </section>
+            <section class="card panel"><h3>Security behavior</h3><div class="score"><div class="score-number">8.4</div><div><strong>Good standing</strong><p>Your team's score is above the target of 8.0.</p></div></div></section>
+          </div>
+        </section>
+      </main>
+    </div>
+    <script>
+      (function () {
+        var title = document.getElementById('page-title');
+        var content = document.getElementById('page-content');
+        var buttons = document.querySelectorAll('[data-page]');
+        buttons.forEach(function (button) {
+          button.addEventListener('click', function () {
+            buttons.forEach(function (item) { item.classList.remove('active'); });
+            button.classList.add('active');
+            title.textContent = button.getAttribute('data-page');
+            if (button.getAttribute('data-page') !== 'Overview') {
+              content.innerHTML = '<p class="eyebrow">Koala Hub</p><h2>' + button.textContent + '</h2><p class="intro">This local preview route is ready for the full SharePoint-connected view.</p><section class="card panel"><p class="empty">Open the web part in SharePoint to exercise live data and actions.</p></section>';
+            } else {
+              window.location.reload();
+            }
+          });
+        });
+      }());
+    </script>
+  </body>
+</html>

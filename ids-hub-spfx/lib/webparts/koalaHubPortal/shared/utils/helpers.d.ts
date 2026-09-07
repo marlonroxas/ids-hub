@@ -1,0 +1,12 @@
+export declare const formatDate: (date: Date | null | undefined) => string;
+export declare const formatDateTime: (date: Date | null | undefined) => string;
+export declare const isOverdue: (dueDate: Date) => boolean;
+export declare const calculateDaysRemaining: (dueDate: Date) => number;
+export declare const truncateText: (text: string, maxLength: number) => string;
+export declare const capitalizeString: (text: string) => string;
+export declare const getCategoryColor: (category: string) => string;
+export declare const getPriorityColor: (priority: string) => string;
+export declare const getStatusColor: (status: string) => string;
+export declare const sortArray: <T>(array: T[], key: keyof T, order?: 'asc' | 'desc') => T[];
+export declare const filterArray: <T>(array: T[], predicate: (item: T) => boolean) => T[];
+export declare const groupByKey: <T>(array: T[], key: keyof T) => Record<string, T[]>;

@@ -1,0 +1,15 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build-rig/v1.20.0/config/build.schema.json",
+  "version": "2.0",
+  "bundles": {
+    "koala-hub-portal": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/koalaHubPortal/KoalaHubPortalWebPart.js",
+          "manifest": "./src/webparts/koalaHubPortal/KoalaHubPortalWebPart.manifest.json"
+        }
+      ]
+    }
+  },
+  "externals": {}
+}

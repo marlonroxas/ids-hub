@@ -1,0 +1,20 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx/client-side-web-part-manifest.schema.json",
+  "id": "a8f9f6a5-5d6a-4b0c-8e7f-3d8b8b75f3a1",
+  "alias": "KoalaHubPortalWebPart",
+  "componentType": "WebPart",
+  "version": "1.0.0",
+  "manifestVersion": 2,
+  "preconfiguredEntries": [
+    {
+      "groupId": "c3c8f7a4-7f3b-4d2a-9f8f-1a2b3c4d5e6f",
+      "group": { "default": "Koala Hub" },
+      "title": { "default": "Koala Hub Portal" },
+      "description": { "default": "Resource, capability and security portal" },
+      "officeFabricIconFontName": "ViewDashboard",
+      "properties": {
+        "description": "A single workspace for the work that keeps our teams ready."
+      }
+    }
+  ]
+}

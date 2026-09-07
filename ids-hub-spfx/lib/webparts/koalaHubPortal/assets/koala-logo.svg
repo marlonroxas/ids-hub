@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 100" role="img" aria-labelledby="title">
+  <title>Koala</title>
+  <rect width="420" height="100" fill="white"/>
+  <path d="M18 50 62 10v80L18 50Z" fill="none" stroke="#1f1f1f" stroke-width="7"/>
+  <path d="m62 10 44 40-44 40" fill="none" stroke="#d71920" stroke-width="7"/>
+  <path d="m22 50 40-40 44 40-44 40Z" fill="none" stroke="#1f1f1f" stroke-width="3"/>
+  <path d="M130 8v84" stroke="#222" stroke-width="8"/>
+  <text x="150" y="75" font-family="Arial, sans-serif" font-size="76" fill="#222">oala</text>
+</svg>
